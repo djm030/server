@@ -2,7 +2,7 @@ FROM python:3.8-slim-buster
 ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 COPY . /app/
-COPY poetry.lock pyproject.toml ./
+COPY poetry.lock pyproject.toml /app/
 
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir poetry \
