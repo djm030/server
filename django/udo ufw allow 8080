@@ -1,0 +1,19 @@
+[0;1;32m●[0m jenkins.service - Jenkins Continuous Integration Server
+     Loaded: loaded (/lib/systemd/system/jenkins.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Wed 2023-04-12 19:17:10 KST; 5h 33min ago
+   Main PID: 35347 (java)
+      Tasks: 47 (limit: 4590)
+     Memory: 1.5G
+     CGroup: /system.slice/jenkins.service
+             └─35347 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.768+0000 [id=306]        INFO        jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.768+0000 [id=306]        INFO        jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.803+0000 [id=307]        INFO        jenkins.InitReactorRunner$1#onAttained: Started all plugins
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.805+0000 [id=307]        INFO        jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.869+0000 [id=307]        INFO        jenkins.InitReactorRunner$1#onAttained: System config loaded
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.869+0000 [id=307]        INFO        jenkins.InitReactorRunner$1#onAttained: System config adapted
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.870+0000 [id=307]        INFO        jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+Apr 12 19:48:34 docker-server jenkins[35347]: 2023-04-12 10:48:34.911+0000 [id=306]        INFO        jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+Apr 12 19:48:35 docker-server jenkins[35347]: 2023-04-12 10:48:35.207+0000 [id=306]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Apr 12 19:48:35 docker-server jenkins[35347]: 2023-04-12 10:48:35.209+0000 [id=75]        INFO        h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 82 plugins in 3 min 55 sec

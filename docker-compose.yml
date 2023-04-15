@@ -1,0 +1,56 @@
+# version: '3'
+
+# services:
+#   django:
+#     build: 
+#       context: /root/server/django
+#       dockerfile: Dockerfile
+#     container_name: django_container
+#     volumes:
+#       - static_volume:/app/static
+#     command: ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
+#     networks:
+#       - my_network
+    
+#   nginx:
+#     build: /root/server/nginx
+#     container_name: nginx_container
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - django
+#     volumes:
+#       - static_volume:/app/static
+#       - /root/server/nginx:/etc/nginx/conf.d
+#     networks:
+#       - my_network
+
+# networks:
+#   my_network:
+#     driver: bridge
+
+# volumes:
+#   static_volume:
+
+services:
+  django:
+    image: my-dockerhub-username/my-django-image:latest
+    container_name: django_container
+    volumes:
+      - static_volume:/app/static
+    command: ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
+    networks:
+      - my_network
+    
+  nginx:
+    build: /root/server/nginx
+    container_name: nginx_container
+    ports:
+      - "80:80"
+    depends_on:
+      - django
+    volumes:
+      - static_volume:/app/static
+      - /root/server/nginx:/etc/nginx/conf.d
+    networks:
+      - my_network

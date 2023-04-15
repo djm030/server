@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["백관열"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.2"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^3.14.0"
+djangorestframework-simplejwt = "^5.2.2"
+drf-yasg = "^1.21.5"
+boto3 = "^1.26.111"
+moviepy = "^1.0.3"
+psycopg2-binary = "^2.9.6"
+python-dotenv = "^1.0.0"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
